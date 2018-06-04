@@ -3,7 +3,7 @@ angular.module("filmes").factory("MeusFilmes", function($q, $http){
         listar: function() {
             var promessa = $q.defer();
 
-            $http.get("https://saude-publica.herokuapp.com/api/formulario").then(
+            $http.get("https://ancient-garden-50515.herokuapp.com/api/pacientes/").then(
                 function(result){
                     var filmes = [];
                     angular.forEach(result.data, function(filme, id){
@@ -16,11 +16,15 @@ angular.module("filmes").factory("MeusFilmes", function($q, $http){
 
             return promessa.promise;
         },
+
         inserir: function(filme) {
-            var id = filme.id + 1
             delete filme.id;
 
-            return $http.post("https://saude-publica.herokuapp.com/api/formulario/" + id, filme)
+            return $http.post("https://ancient-garden-50515.herokuapp.com/api/pacientes/", filme)
+        },
+
+        remover: function(id) {
+            return $http.delete("https://ancient-garden-50515.herokuapp.com/api/pacientes/", id)
         }
     }
-});
+});     

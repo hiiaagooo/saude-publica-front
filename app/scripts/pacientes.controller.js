@@ -27,17 +27,11 @@
       	};
 
 		MeusFilmes.inserir(filme).then(carregarPacientes);
-
       	$scope.novoPaciente = {};
 	  }
 	  
-
       $scope.removerFilme = function(id) {
-      	angular.forEach($scope.filmes, function(filme, i){
-      		if(filme.id == id){
-      			$scope.filmes.splice(i, 1);
-      		};
-      	});
+				MeusFilmes.remover(id).then(carregarPacientes);
       }
 
 	  carregarPacientes();
