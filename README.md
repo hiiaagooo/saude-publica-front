@@ -11,10 +11,8 @@ Exemplo:
 
 O ultimo dado representa o sintoma. Esse cadastro seria aquele que solicitam ao chegarmos em um hospital (público).
 
-Segue meu github:
-
+Projeto completo:
 FrontEnd https://github.com/hiiaagooo/saude-publica-front
-
 BackEnd https://github.com/hiiaagooo/saudePublica
 
 ** devido a unificação dos arquivos para que se fosse possível utilizar o Heroku, o backend não pode ser chamado via npm! Apenas fazendo o push no github e executando o deploy no Heroku. ** Heroku pode desativar por ausência de deploys.
